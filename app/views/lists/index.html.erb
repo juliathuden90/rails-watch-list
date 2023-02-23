@@ -1,0 +1,21 @@
+<div class="banner">
+  <div class="container">
+    <h1>Make your very own movie lists</h1>
+    <p>Select from four different movies</p>
+  </div>
+</div>
+
+<div class="container mb-5">
+  <div class="my-flex-box mt-3">
+    <h2>My lists</h2>
+    <p class="btn btn-flat"><%= link_to "Create a new list", new_list_path %></p>
+  </div>
+
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-category">
+        <p><%= link_to list.name, list_path(list) %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
