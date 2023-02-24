@@ -18,6 +18,6 @@
 
 <p><%= link_to "Create a new bookmark", new_list_bookmark_path(@list) %> </p>
 
-<p><%= link_to "Back to all lists", lists_path  %></p>
+<p><%= link_to "Back to all lists", root_path  %></p>
 
 <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
